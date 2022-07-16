@@ -18,14 +18,14 @@ body {
     display: grid;
     grid-template-columns: minmax(10px, 1fr) minmax(10px, 3fr);
     grid-template-rows: min-content min-content 1fr min-content;
-    gap: 1px;
+    gap: 1px; //this creates the borders in between
 
     > * {
         padding: 1rem;
         text-align: center;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 600px) { //this makes all columns stack when on mobile.
         grid-template-columns: 100%;
         grid-template-rows: auto;
         > * {
