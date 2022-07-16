@@ -35,6 +35,28 @@ body {
   }
 }
 
+button {
+  padding: 1em 1.5em;
+}
+
+img {
+  border-radius: 30px;
+}
+
+.male img {
+  border: 3px solid cornflowerblue;
+}
+.male button {
+  background-color: cornflowerblue;
+}
+
+.female img {
+  border: 3px solid hotpink;
+}
+.female button {
+  background-color: hotpink;
+}
+
 .page-header {
   grid-column: 1/-1;
   background: #ffcdd2;
