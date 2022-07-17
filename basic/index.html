@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Testing out Vue</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <link rel="stylesheet" href="the-holy-grail-layout-with-css-grid.css">
+</head>
+<body>
+
+<div class="page-wrap" id="app">
+    <header class="page-header">
+        Header
+    </header>
+    <nav class="page-nav">
+        Nav
+    </nav>
+    <main class="page-main" :class="gender">
+        <h1>{{ message }}</h1>
+        <div>
+            <img :class="gender" :src="picture" :alt="`${firstName} ${lastName}`">
+            <p>{{ firstName }} {{ lastName }}</p>
+            <p>{{ email }}</p>
+            <button v-on:click="getUser">Pick a Random User</button>
+        </div>
+        <article>
+            <details>
+                <summary>
+                    Click to read more about this page.
+                </summary>
+                <p>
+                    This is a basic example of <a href="https://vuejs.org/">VueJS</a> with the
+                    <a href="https://css-tricks.com/the-holy-grail-layout-with-css-grid/">holy grail layout</a>
+                    , no web server or build tools are required to run this basic example.
+                    <br> Just open the html file.
+                </p>
+                <p> If you edit the scss file tho you will need to compile the css.</p>
+                <p>I was just compiling it with the IDE (phpstorm) automatically after installing the
+                    <a href="https://sass-lang.com/install">Sass Command Line</a> for it use.</p>
+                <p>
+                    The random user data is from an API provided by <a href="https://randomuser.me/">https://randomuser.me/</a>
+                </p>
+            </details>
+        </article>
+    </main>
+    <aside class="page-sidebar">
+        Aside
+    </aside>
+    <footer class="page-footer">
+        Footer
+    </footer>
+</div>
+
+</body>
+</html>
+
+<script src="app.js"></script>
