@@ -40,11 +40,12 @@ button {
 }
 
 img {
-    border-radius: 30px;
+    max-width: 200px;
 }
 
 .male {
     img {
+        border-radius: 30px;
         border: 3px solid cornflowerblue;
     }
     button {
@@ -54,6 +55,7 @@ img {
 
 .female {
     img {
+        border-radius: 30px;
         border: 3px solid hotpink;
     }
     button {
