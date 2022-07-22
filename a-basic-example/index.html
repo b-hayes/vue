@@ -15,10 +15,18 @@
     <nav class="page-nav">
         Nav
     </nav>
-    <main class="page-main" :class="gender">
+<!--
+MAIN html tag:
+ - is recognised by accessibility features and should be free of any irreverent info such as:
+    - navigations
+    - advertising
+ - this is the successor to using role="main" property
+    - some suggest continuing to use role for backwards compatability
+ -->
+    <main class="page-main" :class="gender" role="main">
         <h1>{{ message }}</h1>
         <div>
-            <img :class="gender" :src="picture" :alt="`${firstName} ${lastName}`">
+            <img class="profile" :class="gender" :src="picture" :alt="`${firstName} ${lastName}`">
             <p>{{ firstName }} {{ lastName }}</p>
             <p>{{ email }}</p>
             <button v-on:click="getUser">Pick a Random User</button>
