@@ -1,26 +1,38 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container" style="background-color: grey">
+    <app-header title="Task Tracker"/>
+    <Button color="magenta">This is a Button</Button>
+    <Button color="green">This is a Button</Button>
+    <Button color="orange">This is a Button</Button>
+    <Button color="blue">This is a Button</Button>
+    <Button color="red">This is a Button</Button>
+    <Button color="yellow">This is a Button</Button>
+    <Button color="lightgreen">This is a Button</Button>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AppHeader from "@/components/AppHeader";
+import Button from "@/components/Button";
 
 export default {
   name: 'App',
+  data() {
+    return {
+      'title': 'Hello world!'
+    }
+  },
   components: {
-    HelloWorld
+    AppHeader,
+    Button
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
 }
 </style>
