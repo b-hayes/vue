@@ -41,10 +41,6 @@ button {
   border: 0.1em solid;
   border-color: rgba(255, 255, 255, 0.5) rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.5) rgba(255, 255, 255, 0.5);
   border-radius: 0.3em;
-  /*box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.3);*/
-  display: flex;
-  /*flex-direction: column;*/
-  align-items: center;
 }
 
 button:hover {
@@ -53,7 +49,7 @@ button:hover {
 }
 
 button:active {
-  box-shadow: inset 0em 0em 0em 10em rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 0 10em rgba(0, 0, 0, 0.3);
   border-color: rgba(0, 0, 0, 0.5) rgba(255, 255, 255, 0.5) rgba(255, 255, 255, 0.5) rgba(0, 0, 0, 0.5);
 }
 
