@@ -1,6 +1,6 @@
 <template>
   <header>
-    <slot><h1>Hello World!</h1></slot>
+    <slot>Hello World!</slot>
   </header>
 </template>
 
