@@ -1,8 +1,10 @@
 <template>
   <app-header/>
   <div class="container">
-    <TextInput/>
-    <Button text="✚ Add Task"></Button>
+    <div class="task-row" style="display: flex">
+      <TextInput style="flex: 1"/>
+      <Button text="✚ Add Task"></Button>
+    </div>
   </div>
 </template>
 
