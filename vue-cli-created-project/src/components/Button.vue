@@ -36,11 +36,6 @@ button {
   font-size: var(--button-size);
   color: var(--button-color);
   background-color: var(--button-color);
-  margin: 0.1em;
-  padding: 0.5em 1em;
-  border: 0.1em solid;
-  border-color: rgba(255, 255, 255, 0.5) rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.5) rgba(255, 255, 255, 0.5);
-  border-radius: 0.3em;
 }
 
 button:hover {

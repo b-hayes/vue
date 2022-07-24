@@ -33,8 +33,24 @@ export default {
   box-sizing: border-box;
   margin: 0;
 }
-input:focus, textarea:focus, button:focus, input:hover, textarea:hover, button:hover {
+button {
+  margin: 0.1em;
+  padding: 0.5em 1em;
+  border: 0.1em solid;
+  border-color: rgba(255, 255, 255, 0.5) rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.5) rgba(255, 255, 255, 0.5);
+  border-radius: 0.3em;
+}
+input, textarea {
+  margin: 0.1em;
+  padding: 0.5em 1em;
+  border: 0.1em inset;
+  border-radius: 0.3em;
+}
+input:focus, textarea:focus, button:focus {
+  border: solid cornflowerblue;
   outline: none;
+}
+input:hover, textarea:hover, button:hover {
   box-shadow: -1px 0 3px cornflowerblue, 0 1px 3px cornflowerblue, 1px 0 3px cornflowerblue, 0 -1px 3px cornflowerblue;
 }
 #app {
