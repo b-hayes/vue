@@ -2,7 +2,7 @@
   <!--  <button :style="`background-color: ${color}`"> NOTE: this works but so does the method below.
    see: https://vuejs.org/guide/essentials/class-and-style.html
    -->
-  <button>
+  <button @click="buttonClick()">
     <slot></slot>
     <label>{{ text }}</label>
   </button>
@@ -25,6 +25,11 @@ export default {
       type: String,
       default: 'large'
     }
+  },
+  methods: {
+    buttonClick() {
+      console.log('clicked')
+    }
   }
 }
 </script>
@@ -34,7 +39,6 @@ button {
   --button-color: v-bind(color);
   --button-size: v-bind(size);
   font-size: var(--button-size);
-  color: var(--button-color);
   background-color: var(--button-color);
 }
 
@@ -55,6 +59,7 @@ button:active label {
 
 /* Span contains the button text */
 label {
+  color: var(--button-color);
   /* This always works but generates black or white text only */
   filter: grayscale(100%) contrast(100000%) invert(1);
   /* this one retains some of the original colour but it doesnt look nice for all colours*/

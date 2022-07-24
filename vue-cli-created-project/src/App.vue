@@ -3,8 +3,9 @@
   <div class="container">
     <div class="task-row">
       <TextInput style="flex: 1"/>
-      <Button text="✚ Add Task"></Button>
+      <Button text="Add"></Button>
     </div>
+    <TaskList :tasks="tasks"/>
   </div>
 </template>
 
@@ -12,15 +13,32 @@
 import AppHeader from "@/components/AppHeader";
 import Button from "@/components/Button";
 import TextInput from "@/components/TextInput";
+import TaskList from "@/components/TaskList";
 
 export default {
   name: 'App',
   data() {
     return {
-      'title': 'Hello world!'
+      'title': 'Hello world!',
+      tasks: []
     }
   },
+  created() {
+    this.tasks = [
+      {
+        id: 1,
+        text: 'Click some buttons',
+        due: 'Tomorrow'
+      },
+      {
+        id: 1,
+        text: 'Click some buttons',
+        due: 'Tomorrow'
+      }
+    ]
+  },
   components: {
+    TaskList,
     TextInput,
     AppHeader,
     Button
@@ -55,12 +73,14 @@ input:hover, textarea:hover, button:hover {
 }
 #app {
   width: 100vw;
+  background-color: #e4f3ff;
 }
 .container {
-  width: 100%
+  width: 100%;
 }
 .task-row {
   display: flex;
   padding: 0.5em;
+  border-bottom: 1px solid black;
 }
 </style>
