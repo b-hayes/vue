@@ -2,9 +2,9 @@
   <div class="task-row" :class="task.severity">
     <div v-if="task.severity" :class="task.severity" class="marker">
     </div>
-    <i class="fa fa-check"/>
+    <i class="fa fa-check" @click="completeTask(task.id)"/>
     <input type="text" :value="task.text" disabled>
-    <i class="fa fa-bars"/>
+    <i class="fa fa-times" @click="deleteTask(task.id)"/>
   </div>
 </template>
 
@@ -12,9 +12,18 @@
 export default {
   name: "TaskItem",
   components: {},
-
   props: {
     task: Object
+  },
+  methods: {
+    completeTask() {
+      console.log('complete-task with id: ' + this.task.id)
+      this.$emit('complete-task', this.task.id)
+    },
+    deleteTask() {
+      console.log('delete-task with id: ' + this.task.id)
+      this.$emit('delete-task', this.task.id)
+    }
   }
 }
 </script>
@@ -25,14 +34,11 @@ input {
 }
 input:disabled {
   border-color: rgba(0,0,0,0);
+  background-color: unset;
+  color: unset;
 }
 input:disabled:hover{
   box-shadow: none;
-}
-button {
-  max-width: 2.8em;
-  background-color: unset;
-  border: none;
 }
 .task-row.urgent{
   border-left: 0.5em solid red;
@@ -47,5 +53,8 @@ button {
 }
 i {
   margin: auto 0;
+}
+.fa-times {
+  color: red;
 }
 </style>

@@ -64,6 +64,7 @@ input, textarea {
   padding: 0.5em 1em;
   border: 0.1em inset;
   border-radius: 0.3em;
+  border-color: rgba(0, 0, 0, 0.5) rgba(255, 255, 255, 0.5) rgba(255, 255, 255, 0.5) rgba(0, 0, 0, 0.5);
 }
 input:focus, textarea:focus, button:focus {
   border: solid cornflowerblue;
@@ -73,8 +74,11 @@ input:hover, textarea:hover, button:hover {
   box-shadow: -1px 0 3px cornflowerblue, 0 1px 3px cornflowerblue, 1px 0 3px cornflowerblue, 0 -1px 3px cornflowerblue;
 }
 #app {
+  --app-background-colour: #e5e5e5;
+  --app-text-colour: black;
   width: 100vw;
-  background-color: #e5e5e5;
+  background-color: var(--app-background-colour);
+  color: var(--app-text-colour);
 }
 .container {
   width: 100%;
@@ -83,5 +87,19 @@ input:hover, textarea:hover, button:hover {
   display: flex;
   padding: 0.5em;
   border-bottom: 1px solid black;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: black;
+  }
+  input, textarea {
+    background-color: grey;
+  }
+  #app{
+    --app-background-colour: #616161;
+    --app-text-colour: white;
+    font-weight: bold;
+  }
 }
 </style>
