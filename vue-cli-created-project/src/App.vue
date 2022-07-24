@@ -1,7 +1,7 @@
 <template>
   <app-header/>
   <div class="container">
-    <div class="task-row" style="display: flex">
+    <div class="task-row">
       <TextInput style="flex: 1"/>
       <Button text="✚ Add Task"></Button>
     </div>
@@ -58,5 +58,9 @@ input:hover, textarea:hover, button:hover {
 }
 .container {
   width: 100%
+}
+.task-row {
+  display: flex;
+  padding: 0.5em;
 }
 </style>
