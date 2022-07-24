@@ -16,7 +16,7 @@ header {
   padding: 0.5em 2em;
   width: 100%;
   flex-shrink: 0;
-  background: cornflowerblue;
+  background: var(--app-banner-colour);
   box-shadow: 0 0.1em 1em black;
   border-radius: 0 0 0.5em 0.5em;
   border-bottom: 2px solid rgba(0,0,0, 0.6);

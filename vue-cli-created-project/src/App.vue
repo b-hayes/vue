@@ -74,6 +74,7 @@ input:hover, textarea:hover, button:hover {
   box-shadow: -1px 0 3px cornflowerblue, 0 1px 3px cornflowerblue, 1px 0 3px cornflowerblue, 0 -1px 3px cornflowerblue;
 }
 #app {
+  --app-banner-colour: cornflowerblue;
   --app-background-colour: #e5e5e5;
   --app-text-colour: black;
   width: 100vw;
@@ -97,6 +98,7 @@ input:hover, textarea:hover, button:hover {
     background-color: grey;
   }
   #app{
+    --app-banner-colour: #2c5599;
     --app-background-colour: #616161;
     --app-text-colour: white;
     font-weight: bold;
