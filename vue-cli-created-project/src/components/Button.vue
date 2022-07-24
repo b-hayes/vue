@@ -61,8 +61,8 @@ button:active label {
 /* Span contains the button text */
 label {
   /* This always works but generates black or white text only */
-  /*filter: grayscale(100%) contrast(100000%) invert(1);*/
+  filter: grayscale(100%) contrast(100000%) invert(1);
   /* this one retains some of the original colour but it doesnt look nice for all colours*/
-  filter: hue-rotate(160deg) brightness(80%) invert(1) saturate(100%) contrast(1000%);
+  /*filter: hue-rotate(160deg) brightness(80%) invert(1) saturate(100%) contrast(1000%);*/
 }
 </style>
