@@ -27,8 +27,9 @@ export default {
     this.tasks = [
       {
         id: 1,
-        text: 'Click some buttons',
-        due: 'Tomorrow'
+        text: 'Urgent Task',
+        due: 'Tomorrow',
+        severity: 'urgent'
       },
       {
         id: 1,
@@ -73,7 +74,7 @@ input:hover, textarea:hover, button:hover {
 }
 #app {
   width: 100vw;
-  background-color: #e4f3ff;
+  background-color: #e5e5e5;
 }
 .container {
   width: 100%;
