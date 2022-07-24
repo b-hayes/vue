@@ -2,7 +2,7 @@
   <app-header/>
   <div class="container">
     <TextInput/>
-    <Button></Button>
+    <Button text="✚ Add Task"></Button>
   </div>
 </template>
 
@@ -30,6 +30,12 @@ export default {
 * {
   box-sizing: border-box;
   margin: 0;
+}
+input:hover {
+  box-shadow: -1px 0 3px cornflowerblue, 0 1px 3px cornflowerblue, 1px 0 3px cornflowerblue, 0 -1px 3px #64b4ed;
+}
+button:hover {
+  box-shadow: -1px 0 3px cornflowerblue, 0 1px 3px cornflowerblue, 1px 0 3px cornflowerblue, 0 -1px 3px cornflowerblue;
 }
 #app {
   width: 100vw;
