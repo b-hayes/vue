@@ -31,10 +31,8 @@ export default {
   box-sizing: border-box;
   margin: 0;
 }
-input:hover {
-  box-shadow: -1px 0 3px cornflowerblue, 0 1px 3px cornflowerblue, 1px 0 3px cornflowerblue, 0 -1px 3px #64b4ed;
-}
-button:hover {
+input:focus, textarea:focus, button:focus, input:hover, textarea:hover, button:hover {
+  outline: none;
   box-shadow: -1px 0 3px cornflowerblue, 0 1px 3px cornflowerblue, 1px 0 3px cornflowerblue, 0 -1px 3px cornflowerblue;
 }
 #app {
