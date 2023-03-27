@@ -13,7 +13,6 @@ export default {
     props: {
         tasks: Array
     },
-    emits: ['delete-task']
 }
 </script>
 
