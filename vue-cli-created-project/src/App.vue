@@ -26,7 +26,7 @@ export default {
   created() {
     this.tasks = [
       {
-        id: 1,
+        id: 0,
         text: 'Urgent Task',
         due: 'Tomorrow',
         severity: 'urgent'
@@ -35,7 +35,42 @@ export default {
         id: 1,
         text: 'Click some buttons',
         due: 'Tomorrow'
-      }
+      },
+      {
+        id: 2,
+        text: 'Create a fake server class with post/update/delete endpoints the simply return true/the same data that was entered.',
+        due: 'Tomorrow'
+      },
+      {
+        id: 2,
+        text: 'Make the add button call fakeAPI.post and add a new task component into the list with the data returned.',
+        due: 'Tomorrow'
+      },
+      {
+        id: 3,
+        text: 'Make the delete button call fakeAPI.delete and remove the component when it returns false.',
+        due: 'Tomorrow'
+      },
+      {
+        id: 4,
+        text: 'Make the check button call fakeAPI.update and rule out the task',
+        due: 'Tomorrow'
+      },
+      {
+        id: 5,
+        text: 'Fake a slow connection with fakeAPI and make the buttons disable with visual feedback until the fakeAPI finishes.',
+        due: 'Tomorrow'
+      },
+      {
+        id: 6,
+        text: 'Make the fakeAPI throw errors and implement a handler to show error messages and re-enable the currently disabled buttons',
+        due: 'Tomorrow'
+      },
+      {
+        id: 7,
+        text: 'Create a way to edit old items.',
+        due: 'Tomorrow'
+      },
     ]
   },
   components: {
