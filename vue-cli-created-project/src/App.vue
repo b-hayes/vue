@@ -5,7 +5,10 @@
             <TextInput style="flex: 1"/>
             <Button text="Add"></Button>
         </div>
-        <TaskList :tasks="tasks" @delete-task="deleteTask"/>
+        <TaskList :tasks="tasks"
+                  @delete-task="deleteTask"
+                  @complete-task="completeTask"
+        />
     </div>
 </template>
 
@@ -21,6 +24,18 @@ export default {
         return {
             'title': 'Hello world!',
             tasks: []
+        }
+    },
+    methods: {
+        deleteTask(id) {
+            if (confirm('Delete task ' + id + '?')) {
+                this.tasks = this.tasks.filter((task) => id !== task.id)
+            }
+        },
+        completeTask(id) {
+            this.tasks = this.tasks.map(
+                (task) => id === task.id ? {...task, complete: !task.complete} : task
+            )
         }
     },
     created() {
@@ -79,12 +94,6 @@ export default {
         AppHeader,
         Button
     },
-    methods: {
-        deleteTask(id) {
-            confirm('Delete task ' + id + '?')
-            this.tasks = this.tasks.filter((task) => id !== task.id)
-        }
-    }
 }
 </script>
 

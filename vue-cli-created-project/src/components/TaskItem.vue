@@ -1,5 +1,5 @@
 <template>
-    <div class="task-row" :class="task.severity">
+    <div class="task-row" :class="[task.severity, task.complete ? 'complete' : '']">
         <div v-if="task.severity" :class="task.severity" class="marker">
         </div>
         <i class="fa fa-check" @click="$emit('complete-task', task.id)"/>
@@ -35,6 +35,11 @@ input:disabled:hover {
 
 .task-row.urgent {
     border-left: 0.5em solid red;
+}
+
+.task-row.complete {
+    text-decoration: line-through;
+    background-color: darkgrey;
 }
 
 .marker.urgent {
