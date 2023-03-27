@@ -2,7 +2,8 @@
     <app-header/>
     <div class="container">
         <div class="task-row">
-            <TextInput style="flex: 1"/>
+            <TextInput v-model="newTaskText" :model-value="newTaskText"/>
+            <p>hello {{ newTaskText }}</p>
             <Button text="Add"></Button>
         </div>
         <TaskList :tasks="tasks"
@@ -23,6 +24,7 @@ export default {
     data() {
         return {
             'title': 'Hello world!',
+            newTaskText: '',
             tasks: []
         }
     },
