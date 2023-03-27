@@ -2,9 +2,9 @@
   <div class="task-row" :class="task.severity">
     <div v-if="task.severity" :class="task.severity" class="marker">
     </div>
-    <i class="fa fa-check" @click="completeTask(task.id)"/>
+    <i class="fa fa-check" @click="completeTask()"/>
     <input type="text" :value="task.text" disabled>
-    <i class="fa fa-times" @click="deleteTask(task.id)"/>
+    <i class="fa fa-times" @click="deleteTask()"/>
   </div>
 </template>
 
@@ -44,7 +44,6 @@ input:disabled:hover{
   border-left: 0.5em solid red;
 }
 .marker.urgent {
-  display: none; /* not sure if I want this, hidden for now */
   background-color: red;
   width: 1em;
   height: 1em;
