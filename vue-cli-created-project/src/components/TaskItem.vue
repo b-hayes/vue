@@ -33,13 +33,17 @@ input:disabled:hover {
     box-shadow: none;
 }
 
+.task-row:hover {
+    background-color: grey;
+}
 .task-row.urgent {
     border-left: 0.5em solid red;
 }
-
 .task-row.complete {
+    filter: brightness(50%);
+}
+.task-row.complete input {
     text-decoration: line-through;
-    background-color: darkgrey;
 }
 
 .marker.urgent {
