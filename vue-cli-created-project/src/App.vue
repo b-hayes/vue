@@ -2,9 +2,8 @@
     <app-header/>
     <div class="container">
         <div class="task-row">
-            <TextInput v-model="newTaskText" :model-value="newTaskText"/>
-            <p>hello {{ newTaskText }}</p>
-            <Button text="Add"></Button>
+            <TextInput v-model="newTaskText" :model-value="newTaskText" style="flex: 1"/>
+            <Button text="Add" @click="createTask"></Button>
         </div>
         <TaskList :tasks="tasks"
                   @delete-task="deleteTask"
@@ -29,6 +28,18 @@ export default {
         }
     },
     methods: {
+        createTask() {
+            console.log(this.newTaskText)
+            // Generate a random integer between 1 and 1 million
+            var min = 1;
+            var max = 1000000;
+            var randomInteger = Math.floor(Math.random() * (max - min + 1)) + min;
+            this.tasks.push({
+                id: randomInteger,
+                text: this.newTaskText,
+            })
+            this.newTaskText = '';
+        },
         deleteTask(id) {
             if (confirm('Delete task ' + id + '?')) {
                 this.tasks = this.tasks.filter((task) => id !== task.id)

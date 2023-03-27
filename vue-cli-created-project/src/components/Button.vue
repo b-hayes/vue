@@ -1,9 +1,6 @@
 <template>
-  <!--  <button :style="`background-color: ${color}`"> NOTE: this works but so does the method below.
-   see: https://vuejs.org/guide/essentials/class-and-style.html
-   -->
-  <button @click="buttonClick()">
-    <slot></slot>
+  <button>
+    <div class="slot"><slot></slot></div>
     <label>{{ text }}</label>
   </button>
 </template>
@@ -24,11 +21,6 @@ export default {
     size: {
       type: String,
       default: 'large'
-    }
-  },
-  methods: {
-    buttonClick() {
-      console.log('clicked')
     }
   }
 }
@@ -64,5 +56,9 @@ label {
   filter: grayscale(100%) contrast(100000%) invert(1);
   /* this one retains some of the original colour but it doesnt look nice for all colours*/
   /*filter: hue-rotate(160deg) brightness(80%) invert(1) saturate(100%) contrast(1000%);*/
+}
+
+button:active .slot >>> * {
+    filter: brightness(90%);
 }
 </style>
