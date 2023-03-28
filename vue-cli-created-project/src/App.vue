@@ -3,7 +3,7 @@
     <div class="container">
         <div class="task-row">
             <TextInput v-model="newTaskText" :model-value="newTaskText" style="flex: 1"/>
-            <Button text="Add" @click="createTask"></Button>
+            <Button text="Add" @click="createTask" :disabled="!newTaskText" type="submit"/>
         </div>
         <TaskList :tasks="tasks"
                   @delete-task="deleteTask"
